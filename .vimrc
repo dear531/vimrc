@@ -1,6 +1,6 @@
 set nocompatible
 "set columns=80
-set tabstop=4
+set tabstop=8
 set ruler
 set noexpandtab
 set number
@@ -8,7 +8,7 @@ set ignorecase
 set smartcase
 set wrapmargin=15
 set cindent
-set shiftwidth=4
+set shiftwidth=8
 set wrap
 set nolinebreak
 set modeline
