@@ -7,7 +7,7 @@ set number
 set ignorecase
 set smartcase
 set wrapmargin=15
-set cindent
+"set cindent
 set shiftwidth=8
 set wrap
 set nolinebreak
