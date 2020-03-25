@@ -54,15 +54,6 @@ endif
 "	 	\ | wincmd p | diffthis
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 set autochdir 
-set tags=tags,/home/zhangly/zly/libxml2-2.6.23/tags
-set tags+=/usr/include/openssl/tags
-"set tags+=~/../linux-3.2/tags
-"set tags+=~/../linux-source-2.6.32/tags
-set tags+=/home/zhangly/work/libxml2-2.6.23/tags
-set tags+=/usr/include/ucd-snmp/tags
-set tags+=/usr/include/net-snmp/tags
-set tags+=/home/zhangly/snmp/net-snmp-5.4.4/tags
-set tags+=/home/zhangly/smartgrid/tags/V3.1.XR/tags
 set noic
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
@@ -79,3 +70,6 @@ imap <F2> <C-X><C-I>
 let OmniCpp_MayCompleteDot = 1 " autocomplete with .
 let OmniCpp_MayCompleteArrow = 1 " autocomplete with ->
 let OmniCpp_ShowPrototypeInAbbr = 1 "show function prototype in popup window
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
