@@ -73,3 +73,9 @@ let OmniCpp_ShowPrototypeInAbbr = 1 "show function prototype in popup window
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+"encoding—与系统当前locale相同，所以编辑文件的时候要考虑当前locale，否则要设置的东西就比较多了。
+"fileencoding—vim打开文件时自动辨认其编码，fileencoding就为辨认的值。如果fileencoding为空则保存文件时采用encoding的编码，如果没有修改encoding，那值就是系统当前locale了。
+"termencoding—默认空值，也就是输出到终端时不进行编码转换。
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
